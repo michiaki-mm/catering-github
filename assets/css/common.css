@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* CSS Document */
+html {
+  font-size: 62.5%; /* 16px * 62.5% = 10px  1rem = 10px */
+  width: 100%;
+  box-sizing: border-box;
+}
+body {
+  color: #333; /* RGB */
+  font-family: "Noto Sans JP", 'Cantarell', "游ゴシック体", YuGothic, "游ゴシック",
+    "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 500;
+  font-size: 1.6em;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,1203 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* モバイルのスタイル指定 */
+
+/* page-headerのスタイル指定 */
+
+.body {
+  margin: 0 18px;
+}
+
+.pc-menu {
+  display: none;
+}
+
+.page-header {
+  margin-left: -18px;
+  padding: 25px;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  z-index: 500;
+}
+
+.logo {
+  position: fixed;
+  top: 1px;
+  left: 1px;
+}
+
+/* ハンバーガーメニューのスタイル指定 */
+
+/* ナビゲーションメニュー */
+.global-nav {
+  position: fixed;
+  margin-top: 100px;
+  margin-left: -25px;
+  top: -1248px; /* これで隠れる */
+  width: 100vw; /* スマホに収まるくらい */
+  height: 100%;
+  padding-top: 85px;
+  background-color: rgba(0, 0, 0, 0.85);
+  transition: top 0.9s;
+}
+
+.global-nav__list {
+  margin: -93px;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: 100;
+}
+
+.global-nav__item {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.global-nav__item a {
+  display: block;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: block;
+  background-color: #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.inner_line {
+  position: absolute;
+  left: 12px;
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.inner_line_1 {
+  top: 16px;
+}
+
+.inner_line_2 {
+  top: 24px;
+}
+
+.inner_line_3 {
+  top: 32px;
+}
+
+/* ハンバーガーメニューがアクティブな時の表示 */
+.nav-open .global-nav {
+  top: 0px;
+  z-index: 200; /* ハンバーガーメニューが他の要素よりも前面に表示されるように設定 */
+}
+
+.nav-open .inner_line_1 {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav-open .inner_line_2 {
+  opacity: 0;
+}
+
+.nav-open .inner_line_3 {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ハンバーガーメニューのスタイル指定はここまで */
+/* page-headerのスタイル指定はここまで */
+
+/* fvのスタイル指定はここから */
+
+.fv {
+  height: 582px;
+  margin-left: -18px;
+  margin-right: -18px;
+  background-image: url(../img/mainvisual.png);
+  background-size: cover;
+  background-position: -156px 86px;
+  background-repeat: no-repeat;
+}
+
+.fv-copy {
+  padding-top: 180px;
+}
+
+.fv-copy img {
+  width: 88.3%;
+  height: 100%;
+}
+
+.copy2 {
+  margin-top: 40px;
+  font-style: normal;
+  font-size: 2.4rem;
+  line-height: 35px;
+  /* ボックスの高さと同一 */
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.copy3 {
+  margin: 60px 18px 72px;
+  height: 132px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+}
+
+.copy3 p:nth-of-type(1) {
+  padding-top: 24px;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 29px;
+  /* ボックスの高さと同一 */
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #333333;
+}
+
+.copy3 img {
+  display: block;
+  padding: 8px 28px 0 28px;
+  width: 100%;
+  height: 47px;
+}
+
+.copy3 span {
+  font-size: 2.4rem;
+  color: #333333;
+}
+
+/* fvのスタイル指定はここまで */
+
+/* 無限ループスライドショーのスタイル指定はここから */
+
+/* コンテナー */
+.container {
+  margin: 0 -18px;
+  padding-top: 40px;
+}
+
+.swiper {
+  /* z-index: -1; */
+  pointer-events: auto;
+}
+
+/* スライダーのwrapper */
+.infinite-slider .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+/* スライド内の画像 */
+.infinite-slider .swiper-slide img {
+  width: auto;
+  height: 100%;
+}
+
+.fadein {
+  opacity: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, transform;
+}
+
+.swiper-slide img {
+  padding-right: 24px;
+}
+
+/* 無限ループスライドショーのフェードインの指定はここから */
+
+.fadein.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* 無限ループスライドショーのフェードインの指定はここまで */
+
+/* 無限ループスライドショーの指定はここまで */
+
+/* featureの指定はここから */
+
+#feature {
+  margin-top: 80px;
+}
+
+.feature-title {
+  font-size: 2.7rem;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  line-height: 39px;
+  letter-spacing: 0.02em;
+}
+
+/* cardをフェードインさせるためのCSSコード、ここから */
+
+.feature-list .card {
+  /* z-index: -1; */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.feature-list .card.list_chain_fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* cardをフェードインさせるためのCSSコード、ここまで */
+
+.card {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  max-width: 235px;
+  text-align: center;
+}
+
+.card_02 {
+  margin: 0 40px 40px 40px;
+}
+
+.feature-text {
+  margin-top: 14px;
+  width: 234px;
+  text-align: left;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 785px;
+  padding-top: 40px;
+}
+
+.card-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card-text img {
+  margin: 7px 10px 0 0;
+  width: 54px;
+  height: 51px;
+}
+
+.card-text h3 {
+  border-top: 2px solid #000000;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 26px;
+}
+
+.card-text h3 span {
+  display: block;
+  margin-top: 4px;
+}
+
+/* featureの指定はここまで */
+
+/* planの指定はここから */
+
+#plan {
+  margin-top: 36px;
+  padding-bottom: 80px;
+  background: linear-gradient(to right, #f0f0f0 50%, #f6f6f6 50%);
+  color: #333;
+}
+
+.plan-title {
+  padding-top: 80px;
+  font-size: 2.7rem;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0.54px;
+}
+
+.plan-read {
+  margin-top: 24px;
+  padding: 0 10px;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+}
+
+.plan-card {
+  margin-top: 36px;
+}
+
+/* プランカードフェードインする指定ここから */
+
+.plan-card_fadein {
+  opacity: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, transform;
+}
+
+.plan-card_fade-in-up {
+  transform: translate(0, 50px);
+}
+
+.plan-card_scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* プランカードフェードインする指定ここまで */
+
+.plan-wrapper {
+  padding-top: 12px;
+}
+
+.plan-subtitle_01 {
+  height: 29px;
+  line-height: 29px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.plan-subtitle_02 {
+  margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 227px;
+  height: 36px;
+  line-height: 36px;
+  background: #333;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.26px;
+}
+
+.plan-text {
+  margin-top: 16px;
+  padding: 0 10px;
+  font-size: 1.4rem;
+  line-height: normal;
+  text-align: left;
+}
+
+.plan-img-wrapper_02 {
+  display: none;
+}
+
+/* planの指定はここまで */
+
+/* areaの指定はここから*/
+
+#area {
+  margin-top: 80px;
+}
+
+.area-title {
+  font-size: 2.7rem;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  line-height: 39px;
+  letter-spacing: 0.02em;
+}
+
+.area-wrapper {
+  margin-top: 40px;
+}
+
+.area-text h3 {
+  margin: 0 auto;
+  padding: 8px;
+  max-width: 128px;
+  background: #000;
+  color: #fff;
+  letter-spacing: 0.32px;
+}
+
+.area-text h3:nth-of-type(2) {
+  margin-top: 40px;
+}
+
+.area-text p:nth-of-type(1),
+.area-text p:nth-of-type(2) {
+  margin-top: 20px;
+  font-size: 1.4rem;
+}
+
+.area-notice {
+  margin: 32px auto 0 auto;
+  max-width: 327px;
+  letter-spacing: 0.32px;
+}
+
+.area-notice span {
+  display: block;
+  text-align: left;
+}
+
+/* areaの指定はここまで */
+
+/* contactのスタイル指定ここから */
+
+#contact {
+  margin: 80px 0;
+}
+
+.contact-title {
+  font-size: 2.7rem;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  line-height: 39px;
+  letter-spacing: 0.02em;
+}
+
+.contact-text {
+  margin-top: 40px;
+}
+
+.box_con {
+  margin-top: 64px;
+  width: 100%;
+}
+
+.box_con form {
+  width: 100%;
+}
+
+.formTable {
+  margin: 0 auto;
+}
+
+.box_con form .formTable tr {
+  position: relative;
+}
+
+.box_con form .formTable tr th {
+  text-align: left;
+  width: 100%;
+  display: block;
+  padding-top: 40px;
+  font-size: 2.1rem;
+  font-weight: 500;
+  letter-spacing: 0.42px;
+  border-top: 1px solid #000000;
+}
+
+.box_con form .formTable tr th span {
+  background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
+  padding: 4px;
+  color: #fff;
+  margin-left: 0.5em;
+  font-size: 1.6rem;
+}
+
+.box_con form .formTable tr:nth-child(7) td {
+  padding-bottom: 60px;
+}
+
+.box_con form .formTable tr td {
+  padding: 16px 0 40px 0;
+  display: block;
+  width: 100%;
+}
+
+.box_con form .formTable tr td .wide {
+  width: 100%;
+  height: 40px;
+}
+
+.box_con form .formTable tr td textarea {
+  width: 100%;
+}
+
+.btn span input {
+  width: 161px;
+  height: 55px;
+  background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
+  color: #fff;
+  border: initial;
+  cursor: pointer;
+}
+
+.inquiry-call {
+  margin-top: 60px;
+}
+
+.inquiry-call h2 {
+  display: inline;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  background: linear-gradient(transparent 80%, #F6F048 0%);
+}
+
+.inquiry-call p:nth-of-type(1) {
+  margin-top: 32px;
+  font-size: 2.7rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 3.78px;
+}
+
+.inquiry-call p:nth-of-type(1) img {
+  display: inline-block;
+  margin-right: 2px;
+}
+
+.inquiry-call p:nth-of-type(2) {
+  margin-top: 20px;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.inquiry-call_wrapper02 {
+  margin-top: 40px;
+}
+
+.order-btn {
+  margin: 36px auto 0 auto;
+  padding: 34px 40px;
+  width: 300px;
+  display: block;
+  border-radius: 5px;
+  background: #000;
+  font-size: 2.3rem;
+  font-weight: 550;
+  letter-spacing: 0.48px;
+}
+
+.order-btn:link {
+  color: #fff;
+}
+
+/* contactのスタイル指定ここまで */
+
+/* footerのスタイル指定ここから */
+
+#footer {
+  margin: 0 -18px;
+  padding: 0 18px;
+  height: 311px;
+  background: #F0F0F0;
+  position: relative;
+  color: #333;
+}
+
+.footer-logo {
+  position: absolute;
+  top: 36px;
+  left: 17px;
+}
+
+.footer-text {
+  width: 272px;
+  text-align: left;
+  position: absolute;
+  top: 121px;
+  left: 31px;
+}
+
+.footer-text p:nth-of-type(4) {
+  margin-top: 36px;
+  font-size: 2.4rem;
+  font-weight: 400;
+  letter-spacing: 0.48px;
+}
+
+/* footerのスタイル指定ここまで */
+
+/* copyrightのスタイル指定ここまで */
+
+.copyright {
+  margin: 0 -18px;
+  padding: 16px 0;
+  color: #fff;
+  background: #000;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+}
+
+/* copyrightのスタイル指定ここまで */
+
+/* ページトップへ戻るボタンのスタイル指定ここから */
+
+.pagetop {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: fixed;
+  right: 30px;
+  bottom: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: .3s;
+  color: #fff;
+  background: #000;
+  z-index: 600;
+
+  /*   デフォルトは非表示 */
+  opacity: 0;
+  
+}
+
+.pagetop:hover {
+  box-shadow: 0 0 10px #00A6C4;
+}
+
+/* ページトップへ戻るボタンのスタイル指定ここまで */
+/* PCのスタイル指定 */
+
+@media (min-width: 600px) {
+  /*PCのpage-headerのスタイル指定ここから */
+  .page-header {
+    z-index: 10;
+  }
+  .pc-menu {
+    display: block;
+  }
+
+  .menu-list {
+    display: flex;
+    justify-content: right;
+  }
+
+  .menu-content li:nth-child(1) {
+    display: inline-block;
+    width: 77px;
+    margin-right: 60px;
+  }
+
+  .menu-content li:nth-child(2) {
+    display: inline-block;
+    width: 153px;
+    margin-right: 60px;
+  }
+
+  .menu-content li:nth-child(3) {
+    display: inline-block;
+    margin-right: 114px;
+    width: 82px;
+  }
+
+  /* pcメニューの#contactのスタイル指定ここから */
+
+  .menu-content li:nth-child(4) {
+    background: linear-gradient(90deg, #e52d27 0%, #b31217 100%);
+    width: 258px;
+    height: 156px;
+  }
+
+  .menu-content li:nth-child(4) a {
+    color: #fff;
+  }
+
+  .menu-content li:nth-child(4) .number {
+    padding-top: 18px;
+    letter-spacing: 2.24px;
+  }
+
+  .menu-content li:nth-child(4) .business_hours {
+    font-size: 1rem;
+  }
+
+  .menu-content li:nth-child(4) p:nth-of-type(3) {
+    margin: 21px auto 0 auto;
+    width: 178px;
+    border: 1px solid #fff;
+    font-family: Cantarell;
+    font-size: 1.6rem;
+  }
+
+  .menu-content li:nth-child(4) span {
+    font-family: Noto Sans JP;
+  }
+
+  /* pcメニューの#contactのスタイル指定ここまで */
+
+  .global-nav {
+    display: none;
+  }
+
+  #js-hamburger {
+    display: none;
+  }
+  /*PCのpage-headerのスタイル指定ここまで */
+
+  /* PCのfvのスタイル指定はここから */
+
+  .fv {
+    height: 850px;
+    background-position: initial;
+  }
+
+  .fv-copy {
+    padding-top: 300px;
+  }
+
+  .fv img:nth-child(1) {
+    max-width: 720px;
+  }
+
+  .copy2 {
+    margin-top: 20px;
+    font-size: 3.6rem;
+  }
+
+  .copy3 {
+    width: 580px;
+    height: 135px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .copy3 p:nth-of-type(1) {
+    font-size: 2.4rem;
+  }
+
+  .copy3 img {
+    height: 56px;
+  }
+
+  /* PCのfvのスタイル指定はここまで */
+
+  /* PCの無限ループスライドショースタイル指定はここから */
+
+  .swiper {
+    z-index: 0;
+  }
+
+  /* スライド */
+  .infinite-slider .swiper-slide {
+    height: 320px; /* 高さを指定 */
+    width: auto;
+  }
+
+  /* スライド内の画像 */
+  .infinite-slider .swiper-slide img {
+    width: auto;
+    height: 100%;
+  }
+
+  /*  PCのswiper-wrapperが一つずつフェードインする指定ここから  */
+  .swiper-wrapper .fadein.scroll-in:nth-child(6n + 1) {
+    transition-delay: 0s;
+  }
+
+  .swiper-wrapper .fadein.scroll-in:nth-child(6n + 2) {
+    transition-delay: 0.2s;
+  }
+  .swiper-wrapper .fadein.scroll-in:nth-child(6n + 3) {
+    transition-delay: 0.4s;
+  }
+
+  .swiper-wrapper .fadein.scroll-in:nth-child(6n + 4) {
+    transition-delay: 0.6s;
+  }
+
+  .swiper-wrapper .fadein.scroll-in:nth-child(6n + 5) {
+    transition-delay: 0.8s;
+  }
+
+  .swiper-wrapper .fadein.scroll-in:nth-child(6n + 6) {
+    transition-delay: 1s;
+  }
+
+  /*  PCのswiper-wrapperが一つずつフェードインする指定ここまで  */
+  /*  PCの無限ループスライドショーの指定はここまで */
+
+  /*  PCのfeatureの指定はここから */
+
+  .feature-title {
+    height: 58px;
+    line-height: 58px;
+    font-size: 40px;
+  }
+
+  /*  PCの横3列のcardが一つずつフェードインする指定ここから */
+
+  .feature-list {
+    padding-top: 72px;
+  }
+
+  .feature-list .card {
+    z-index: 0;
+  }
+
+  .feature-list .card:nth-child(3n + 1) {
+    transition-delay: 0s;
+  }
+
+  .feature-list .card:nth-child(3n + 2) {
+    transition-delay: 0.2s;
+  }
+
+  .feature-list .card:nth-child(3n + 3) {
+    transition-delay: 0.4s;
+  }
+
+  /*  PCの横3列のcardが一つずつフェードインする指定ここまで */
+  /*  PCのfeatureの指定はここまで */
+
+  /* PCのplanの指定はここから */
+
+  #plan {
+    margin-top: 76px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1018px;
+  }
+
+  .plan-title {
+    font-size: 40px;
+  }
+
+  .plan-read {
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.48px;
+  }
+
+  .plan-img-wrapper_02 {
+    display: block;
+  }
+
+  .plan-card:nth-child(3n + 0) {
+    padding-top: 100px;
+    margin-top: 0;
+  }
+
+  .plan-card:nth-child(3n + 0),
+  .plan-card:nth-child(3n + 2) {
+    display: flex;
+  }
+
+  .plan-card:nth-child(3n + 0) .plan-wrapper,
+  .plan-card:nth-child(3n + 2) .plan-wrapper {
+    flex-basis: 50%; /* <div> タグを均等に配置 */
+    padding-top: 0;
+  }
+
+  .plan-card:nth-child(3n + 0) .plan-img-wrapper_01,
+  .plan-card:nth-child(3n + 2) .plan-img-wrapper_01 {
+    flex-basis: 50%;
+  }
+
+  /* プランカードフェードインする指定ここから */
+
+  .plan-card_fadein {
+    opacity: 0;
+    transition-duration: 700ms;
+    transition-property: opacity, transform;
+  }
+
+  .plan-card_fade-in-up {
+    transform: translate(0, 50px);
+  }
+
+  .plan-card_scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  /* プランカードフェードインする指定ここまで */
+
+  .plan-card:nth-child(3n + 0) .plan-img-wrapper_01 img,
+  .plan-card:nth-child(3n + 2) .plan-img-wrapper_01 img {
+    width: 100%;
+    max-height: 323px;
+  }
+
+  .plan-card:nth-child(3n + 0) .plan-subtitle_01,
+  .plan-card:nth-child(3n + 2) .plan-subtitle_01 {
+    margin: 0 220px 0 40px;
+    padding-top: 40px;
+    border-top: 3px solid #333;
+    border-radius: 1px;
+    text-align: center;
+    font-size: 2.4rem;
+  }
+
+  .plan-card:nth-child(3n + 0) .plan-subtitle_02,
+  .plan-card:nth-child(3n + 2) .plan-subtitle_02 {
+    margin-top: 46px;
+    margin-left: 51px;
+  }
+
+  .plan-card:nth-child(3n + 0) .plan-text,
+  .plan-card:nth-child(3n + 2) .plan-text {
+    margin: 12px 218px 0 40px;
+    padding-bottom: 81px;
+    border-bottom: 3px solid #333;
+    border-radius: 1px;
+  }
+
+  .plan-card:nth-child(3n + 0) .plan-img-wrapper_02,
+  .plan-card:nth-child(3n + 2) .plan-img-wrapper_02 {
+    display: block;
+  }
+
+  .plan-card:nth-child(3n + 0) .plan-img-wrapper_02 {
+    position: relative;
+  }
+
+  .original_plan_photo {
+    position: absolute;
+    top: -330px;
+    left: 275px;
+    width: 330px;
+    height: 350px;
+  }
+
+  .plan-card:nth-child(3n + 1) {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 53px;
+  }
+
+  .plan-card:nth-child(3n + 1) .plan-wrapper {
+    flex-basis: 50%; /* <div> タグを均等に配置 */
+    padding-top: 0;
+  }
+
+  .plan-card:nth-child(3n + 1) .plan-img-wrapper_01_reverse {
+    width: 100%;
+    height: 312px;
+    flex-basis: 50%;
+  }
+
+  .plan-card:nth-child(3n + 1) .plan-img-wrapper_01_reverse img {
+    margin-top: 0;
+    width: 100%;
+    max-height: 323px;
+  }
+
+  .plan-card:nth-child(3n + 1) .plan-subtitle_01 {
+    margin: 0 40px 0 202px;
+    padding-top: 40px;
+    border-top: 3px solid #333;
+    font-size: 2.4rem;
+  }
+
+  .plan-card:nth-child(3n + 1) .plan-subtitle_02 {
+    margin-top: 47px;
+    margin-right: 61px;
+  }
+
+  .plan-card:nth-child(3n + 1) .plan-text {
+    margin: 12px 40px 0 202px;
+    padding-bottom: 119px;
+    border-bottom: 3px solid #333;
+    border-radius: 1px;
+  }
+
+  .plan-card:nth-child(3n + 1) .plan-img-wrapper_02 {
+    position: relative;
+  }
+
+  .finger_plan_photo {
+    position: absolute;
+    top: -314px;
+    right: 348px;
+  }
+
+  .plan-card:nth-child(3n + 2) {
+    margin-top: 67px;
+  }
+
+  .plan-card:nth-child(3n + 2) .plan-text {
+    padding-bottom: 123px;
+  }
+
+  .plan-card:nth-child(3n + 2) .plan-img-wrapper_02 {
+    position: relative;
+  }
+
+  .luxury_plan_photo {
+    width: 65%;
+    position: absolute;
+    top: -252px;
+    left: 312px;
+  }
+
+  /* original_plan_photoとluxury_plan_photoのfade-in fade-in-rightで右から左にフェードインする指定ここから */
+
+  .plan_photofade-in01 {
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+  }
+
+  .plan_photo-fade-in-right {
+    transform: translate(50px, 0);
+  }
+
+  .plan_photo-scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  /* original_plan_photoとluxury_plan_photoのfade-in fade-in-rightで右から左にフェードインする指定ここまで */
+
+  /* finger_plan_photoの左から右にフェードインする指定ここから */
+
+  .plan_photo_fade-in02 {
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+  }
+
+  .plan_photo_fade-in-left {
+    transform: translate(-50px, 0);
+  }
+
+  .plan_photo-scroll-in02 {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  /* finger_plan_photoの左から右にフェードインする指定ここまで */
+
+  /* PCのplanの指定はここまで */
+
+  /* PCのareaの指定はここから*/
+
+  #area {
+    margin: 120px auto 0 auto;
+    max-width: 800px;
+  }
+
+  .area-text h3,
+  .area-text h3:nth-of-type(2) {
+    margin-top: 80px;
+  }
+
+  .area-text p:nth-of-type(1),
+  .area-text p:nth-of-type(2) {
+    margin-top: 20px;
+    font-size: initial;
+  }
+
+  .area-notice {
+    margin-top: 56px;
+    max-width: 396px;
+  }
+
+  .area-notice span {
+    display: inline;
+  }
+
+  /* PCのareaの指定はここまで */
+
+
+  /* PCのcontactのスタイル指定ここから */
+
+  .box_con form .formTable tr {
+    display: flex;
+    margin: 0 auto;
+    max-width: 800px;
+    border-top: 1px solid #000000;
+  }
+
+  .box_con form .formTable tr th {
+    margin-right: 24px;
+    max-width: 274px;
+    border-top: initial;
+  }
+
+  .formTable {
+    width: 58%;
+  }
+
+  .box_con form .formTable tr td {
+    padding-top: 40px;
+  }
+
+  /* 必須の個別指定(1番目) */
+  .box_con form .formTable tr:nth-child(1) th:nth-child(1) span:nth-child(1) {
+    margin-left: 168px;
+  }
+
+  /* 必須の個別指定(2番目) */
+  .box_con form .formTable tr:nth-child(2) th:nth-child(1) span:nth-child(1) {
+    margin-left: 147px;
+  }
+
+  /* 必須の個別指定(3番目) */
+  .box_con form .formTable tr:nth-child(3) th:nth-child(1) span:nth-child(1) {
+    margin-left: 168px;
+  }
+
+/* 必須の個別指定(4番目) */
+.box_con form .formTable tr:nth-child(4) th:nth-child(1) span:nth-child(1) {
+  margin-left: 126px;
+}
+
+/* 必須の個別指定(5番目) */
+.box_con form .formTable tr:nth-child(5) th:nth-child(1) span:nth-child(1) {
+  margin-left: 83px;
+}
+
+/* 必須の個別指定(6番目) */
+.box_con form .formTable tr:nth-child(6) th:nth-child(1) span:nth-child(1) {
+  margin-left: 61px;
+}
+
+.inquiry-call {
+  display: flex;
+  justify-content: space-around;
+  margin: 80px auto 0;
+  max-width: 900px;
+}
+
+.inquiry-call_wrapper01 {
+  border-right: 1px solid #000000 ;
+  padding-right: 110px;
+}
+
+.inquiry-call_wrapper02 {
+  margin-top: initial;
+}
+
+.order-btn:link {
+  color: #fff;
+}
+
+  /* PCのcontactのスタイル指定ここまで */
+
+  /* PCのfooterのスタイル指定ここから */
+
+  .footer-logo {
+    left: 46px;
+  }
+
+  .footer-text {
+    left: 60px;
+  }
+
+  /* PCのfooterのスタイル指定ここまで */
+}

@@ -38,7 +38,7 @@ fadeins.start();
 window.addEventListener("DOMContentLoaded", () => {
     const infiniteSlider = new Swiper(".infinite-slider", {
         loop: true,
-        loopedSlides: 2,
+        loopedSlides: 3,
         slidesPerView: "auto",
         speed: 8000,
         autoplay: {

@@ -209,6 +209,7 @@
 
 /* スライド内の画像 */
 .infinite-slider .swiper-slide img {
+  object-fit: cover;
   width: auto;
   height: 100%;
 }

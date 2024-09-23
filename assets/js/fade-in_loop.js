@@ -1,42 +1,40 @@
-class Fadeins {
+// ES5バージョンのFadeinsクラス
+var Fadeins = function(fadeinElement) {
     // コンストラクター
-    constructor(fadeinElement) {
     // 初期化を行う
     this.fadein = fadeinElement;
-    this.fadeins = Array.from(this.fadein.querySelectorAll('.fadein'));
+    this.fadeins = Array.prototype.slice.call(this.fadein.querySelectorAll('.fadein'));
     this.windowHeight = window.innerHeight;
-    this.position = Math.floor(window.innerHeight * .75);
+    this.position = Math.floor(window.innerHeight * 0.75);
     this.currentfadeIndex = 0;
-    }
+};
 
-    handleScroll() {
-        for (let i = this.currentfadeIndex; i < this.fadeins.length; i++) {
-
-        let offsetTop = this.fadeins[i].getBoundingClientRect().top;
+Fadeins.prototype.handleScroll = function() {
+    for (var i = this.currentfadeIndex; i < this.fadeins.length; i++) {
+        var offsetTop = this.fadeins[i].getBoundingClientRect().top;
         if (offsetTop < this.position) {
             this.fadeins[i].classList.add('scroll-in');
             this.currentfadeIndex = i + 1; // 現在のフェードイン要素のインデックスを更新
-        };
-      };
-    };
-
-    start() {
-        window.addEventListener('scroll', this.handleScroll.bind(this));
-    };
+        }
+    }
 };
 
-// フェードインのクラス構文の処理、ここまで
+Fadeins.prototype.start = function() {
+    var _this = this;
+    window.addEventListener('scroll', function() {
+        _this.handleScroll();
+    });
+};
 
 // フェードインの処理
 
-const fadeins = new Fadeins(document);
+var fadeins = new Fadeins(document);
 fadeins.start();
-
 
 // 無限ループスライドショーの処理、ここから
 
-window.addEventListener("DOMContentLoaded", () => {
-    const infiniteSlider = new Swiper(".infinite-slider", {
+window.addEventListener("DOMContentLoaded", function() {
+    var infiniteSlider = new Swiper(".infinite-slider", {
         loop: true,
         loopedSlides: 3,
         slidesPerView: "auto",
@@ -49,3 +47,4 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // 無限ループスライドショーの処理、ここまで
+
